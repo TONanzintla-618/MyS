@@ -10,13 +10,23 @@
             color: #00ff00;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            overflow: hidden;
+        }
+        .outer-container {
+            border: 2px solid #00ff00;
+            width: 90vw;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             flex-direction: column;
-            overflow-x: hidden;
+            position: relative;
+            box-sizing: border-box;
         }
         .container {
             display: flex;
@@ -24,8 +34,10 @@
             justify-content: flex-start;
             border: 2px solid #00ff00;
             padding: 20px;
-            max-width: 90vw;
-            overflow-wrap: break-word;
+            width: 100%;
+            height: calc(100% - 60px); /* Adjusting for button and margin */
+            overflow: auto;
+            box-sizing: border-box;
         }
         .text-content {
             max-width: 500px;
@@ -58,7 +70,8 @@
             color: #000000;
         }
         .sound-toggle-button {
-            margin-top: 20px;
+            position: absolute;
+            bottom: 20px;
             background: none;
             border: none;
             cursor: pointer;
@@ -78,7 +91,7 @@
             line-height: 1em;
             white-space: pre;
             font-family: monospace;
-            max-width: 90vw;
+            max-width: 100%;
         }
     </style>
 </head>
@@ -89,25 +102,26 @@
         Ваш браузер не підтримує відтворення аудіо.
     </audio>
 
-    <div class="container">
-        <img src="https://iili.io/dOuLIob.jpg" alt="მარაგანდა">
-        <div class="text-content">
-            <h1>დოკუმენტი</h1>
-            <p><strong>მარაგანდა</strong></p>
-            <p><strong>მისამართი:</strong> მარსი, ლაზერული დივიზიის ბაზა</p>
-            <p><strong>დაბადების წელი:</strong> 05/11/2098</p>
-            <p><strong>მოქალაქეობა:</strong> მარსი</p>
-            <p><strong>აღწერა:</strong> მარაგანდა არის მარსის იმპერიის სამხედრო საწყობის ხელმძღვანელი, ლაზერული დივიზიის ლიდერი. მისი მეთაურობით მარსის ჯარები აკონტროლებენ დედამიწას და მის მოსახლეობას, უჩვენებენ მათ მარსის ძლევამოსილებას.</p>
+    <div class="outer-container">
+        <div class="container">
+            <img src="https://iili.io/dOuLIob.jpg" alt="მარაგანდა">
+            <div class="text-content">
+                <h1>დოკუმენტი</h1>
+                <p><strong>მარაგანდა</strong></p>
+                <p><strong>მისამართი:</strong> მარსი, ლაზერული დივიზიის ბაზა</p>
+                <p><strong>დაბადების წელი:</strong> 05/11/2098</p>
+                <p><strong>მოქალაქეობა:</strong> მარსი</p>
+                <p><strong>აღწერა:</strong> მარაგანდა არის მარსის იმპერიის სამხედრო საწყობის ხელმძღვანელი, ლაზერული დივიზიის ლიდერი. მისი მეთაურობით მარსის ჯარები აკონტროლებენ დედამიწას და მის მოსახლეობას, უჩვენებენ მათ მარსის ძლევამოსილებას.</p>
+            </div>
         </div>
-    </div>
-    <a class="button" href="https://www.tiktok.com/@tonanzintla__618?_t=8pMwUdo5iVx&_r=1" target="_blank">ტიკტოკზე გადასვლა</a>
+        <a class="button" href="https://www.tiktok.com/@tonanzintla__618?_t=8pMwUdo5iVx&_r=1" target="_blank">ტიკტოკზე გადასვლა</a>
 
-    <button class="sound-toggle-button" id="sound-toggle">
-        <img id="sound-icon" src="https://static.thenounproject.com/png/904739-200.png" alt="Sound Icon">
-    </button>
+        <button class="sound-toggle-button" id="sound-toggle">
+            <img id="sound-icon" src="https://static.thenounproject.com/png/904739-200.png" alt="Sound Icon">
+        </button>
 
-    <div class="ascii-art-large">
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        <div class="ascii-art-large">
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&######B####&&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -154,6 +168,7 @@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        </div>
     </div>
 
     <script>

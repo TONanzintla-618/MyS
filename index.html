@@ -15,40 +15,45 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            overflow: hidden; /* Заборонити прокручування */
+            overflow: hidden;
         }
         .container {
             display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             border: 2px solid #00ff00;
-            padding: 20px;
-            max-width: 800px;
-            max-height: 90vh; /* Обмежити висоту */
+            padding: 10px;
+            width: 90vw; /* Зменшена ширина */
+            height: 90vh; /* Зменшена висота */
+            max-width: 400px; /* Максимальна ширина */
+            max-height: 600px; /* Максимальна висота */
             resize: both;
             overflow: auto;
             position: relative;
+            background-color: #000000; /* Фон для видимості */
         }
         .text-content {
-            max-width: 500px;
-            margin-left: 20px;
+            max-width: 100%;
+            margin-top: 10px;
             position: relative;
+            text-align: center;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 1.5em;
             margin-bottom: 0.5em;
-            text-align: center;
-            width: 100%;
         }
         img {
-            max-width: 200px;
+            max-width: 100%;
+            height: auto;
             border: 2px solid #00ff00;
             display: block;
+            margin: auto;
         }
         .button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1em;
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 0.9em;
             color: #000000;
             background-color: #00ff00;
             border: none;
@@ -62,21 +67,17 @@
         .ascii-art {
             font-size: 0.5em;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px;
             line-height: 1em;
             white-space: pre;
-            display: inline-block;
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            transform: translate(-50%, -50%);
+            overflow: hidden;
         }
         .sound-button {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
             background-color: #ffffff;
             border: none;
             cursor: pointer;

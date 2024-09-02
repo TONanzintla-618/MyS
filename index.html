@@ -19,24 +19,24 @@
         }
         .outer-container {
             border: 2px solid #00ff00;
-            width: 90vw;
-            height: 90vh;
+            width: 80vw;
+            height: 80vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
             position: relative;
-            box-sizing: border-box;
+            overflow: hidden; /* Ensure content doesn't overflow */
         }
         .container {
             display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
+            align-items: center;
+            justify-content: center;
             border: 2px solid #00ff00;
             padding: 20px;
             width: 100%;
-            height: calc(100% - 60px); /* Adjusting for button and margin */
-            overflow: auto;
+            height: calc(100% - 80px); /* Adjusting for button and margin */
+            overflow: auto; /* Enable scrolling if content overflows */
             box-sizing: border-box;
         }
         .text-content {
@@ -44,17 +44,18 @@
             margin-left: 20px;
         }
         h1 {
-            font-size: 2em;
+            font-size: 1.5em;
             margin-bottom: 0.5em;
             text-align: center;
             width: 100%;
         }
         img {
-            max-width: 200px;
+            max-width: 150px;
             border: 2px solid #00ff00;
+            margin-right: 20px;
         }
         .button {
-            margin-top: 20px;
+            margin: 20px;
             padding: 10px 20px;
             font-size: 1em;
             color: #000000;
@@ -62,7 +63,6 @@
             border: none;
             cursor: pointer;
             text-align: center;
-            text-decoration: none;
             border-radius: 5px;
         }
         .button a {
@@ -85,13 +85,14 @@
             padding: 5px;
         }
         .ascii-art-large {
-            font-size: 0.5em;
+            font-size: 0.4em;
             text-align: center;
             margin-top: 20px;
             line-height: 1em;
             white-space: pre;
             font-family: monospace;
             max-width: 100%;
+            overflow: auto;
         }
     </style>
 </head>

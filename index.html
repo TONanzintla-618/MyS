@@ -59,6 +59,8 @@
             border: none;
             cursor: pointer;
             text-align: center;
+            position: relative;
+            bottom: 10px; /* Виправлення позиції кнопки */
         }
         .button a {
             text-decoration: none;
@@ -68,8 +70,8 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            width: 40px; /* Збільшено для кращого натискання */
-            height: 40px; /* Збільшено для кращого натискання */
+            width: 50px; /* Збільшено для кращого натискання */
+            height: 50px; /* Збільшено для кращого натискання */
             background-color: #ffffff;
             border: none;
             cursor: pointer;
@@ -79,10 +81,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Додано тінь для видимості */
         }
         .sound-button img {
-            width: 24px; /* Зменшено для відповідності розмірам кнопки */
-            height: 24px; /* Зменшено для відповідності розмірам кнопки */
+            width: 30px; /* Зменшено для відповідності розмірам кнопки */
+            height: 30px; /* Зменшено для відповідності розмірам кнопки */
             object-fit: cover;
         }
         .sound-button img.off {

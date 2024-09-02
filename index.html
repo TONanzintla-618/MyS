@@ -53,23 +53,33 @@
             text-decoration: none;
             color: #000000;
         }
-        .ascii-art-small {
+        .ascii-art-large {
             font-size: 0.5em;
             text-align: center;
-            line-height: 1em;
-        }
-        .ascii-art-large {
-            font-size: 0.2em;
-            text-align: center;
-            white-space: pre;
-            line-height: 1em;
             margin-top: 20px;
+            line-height: 1em;
+            white-space: pre;
+            font-family: monospace;
+        }
+        .sound-toggle-button {
+            margin-top: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        .sound-toggle-button img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
         }
     </style>
 </head>
 <body>
     <!-- Додавання музики на фоні -->
-    <audio autoplay loop>
+    <audio id="background-music" autoplay loop>
         <source src="classic-alien-arrival-sound-effect-made-with-Voicemod.mp3" type="audio/mp3">
         Ваш браузер не підтримує відтворення аудіо.
     </audio>
@@ -88,17 +98,11 @@
     <button class="button">
         <a href="https://www.tiktok.com/@tonanzintla__618?_t=8pMwUdo5iVx&_r=1" target="_blank">ტიკტოკზე გადასვლა</a>
     </button>
-    
-    <!-- Малий ASCII-арт -->
-    <div class="ascii-art-small">
-        __    __     ______     ______     ______<br>
-        /\ "-./  \   /\  __ \   /\  == \   /\  ___\<br>
-        \ \ \-./\ \  \ \  __ \  \ \  __<   \ \___  \<br>
-         \ \_\ \ \_\  \ \_\ \_\  \ \_\ \_\  \/\_____\<br>
-          \/_/  \/_/   \/_/\/_/   \/_/ /_/   \/_____/
-    </div>
 
-    <!-- Місце для великого ASCII-арту -->
+    <button class="sound-toggle-button" id="sound-toggle">
+        <img id="sound-icon" src="https://static.thenounproject.com/png/904739-200.png" alt="Sound Icon">
+    </button>
+
     <div class="ascii-art-large">
         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -148,5 +152,21 @@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     </div>
+
+    <script>
+        const soundToggleButton = document.getElementById('sound-toggle');
+        const soundIcon = document.getElementById('sound-icon');
+        const backgroundMusic = document.getElementById('background-music');
+
+        soundToggleButton.addEventListener('click', () => {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                soundIcon.src = 'https://static.thenounproject.com/png/904739-200.png'; // Зображення, коли звук увімкнений
+            } else {
+                backgroundMusic.pause();
+                soundIcon.src = 'https://i.ibb.co/j3Mpgyh/Untitled128-20240902164935.png'; // Зображення, коли звук вимкнений
+            }
+        });
+    </script>
 </body>
 </html>

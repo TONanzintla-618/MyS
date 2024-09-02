@@ -10,73 +10,70 @@
             color: #00ff00;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            overflow: hidden;
+            flex-direction: column;
         }
         .container {
             display: flex;
-            flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
             border: 2px solid #00ff00;
             padding: 20px;
             max-width: 800px;
-            height: 90vh; /* Встановлено висоту контейнера */
-            box-sizing: border-box; /* Включає паддінг і бордер в загальну висоту */
-            background-color: #000000;
-            overflow-y: auto; /* Додає вертикальну прокрутку */
         }
         .text-content {
-            max-width: 100%;
+            max-width: 500px;
+            margin-left: 20px;
         }
         h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 0.5em;
             text-align: center;
             width: 100%;
-            border-bottom: 2px solid #00ff00;
-            padding-bottom: 10px;
         }
         img {
-            max-width: 100%;
-            max-height: 60vh;
-            height: auto;
+            max-width: 200px;
             border: 2px solid #00ff00;
-        }
-        p {
-            margin: 0.5em 0;
-            font-size: 1em;
-        }
-        .hymn {
-            margin-top: 20px;
-            font-size: 1em;
-            border-top: 2px solid #00ff00;
-            padding-top: 10px;
         }
         .button {
             margin-top: 20px;
             padding: 10px 20px;
+            font-size: 1em;
             color: #000000;
             background-color: #00ff00;
             border: none;
-            border-radius: 5px;
-            font-size: 1em;
+            cursor: pointer;
             text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            max-width: 100%;
-            box-sizing: border-box; /* Включає паддінг і бордер в ширину */
         }
-        .button:hover {
-            background-color: #00cc00;
+        .button a {
+            text-decoration: none;
+            color: #000000;
+        }
+        .ascii-art-small {
+            font-size: 0.5em;
+            text-align: center;
+            line-height: 1em;
+        }
+        .ascii-art-large {
+            font-size: 0.2em;
+            text-align: center;
+            white-space: pre;
+            line-height: 1em;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+    <!-- Додавання музики на фоні -->
+    <audio autoplay loop>
+        <source src="classic-alien-arrival-sound-effect-made-with-Voicemod.mp3" type="audio/mp3">
+        Ваш браузер не підтримує відтворення аудіо.
+    </audio>
+
     <div class="container">
         <img src="https://iili.io/dOuLIob.jpg" alt="მარაგანდა">
         <div class="text-content">
@@ -86,20 +83,70 @@
             <p><strong>დაბადების წელი:</strong> 05/11/2098</p>
             <p><strong>მოქალაქეობა:</strong> მარსი</p>
             <p><strong>აღწერა:</strong> მარაგანდა არის მარსის იმპერიის სამხედრო საწყობის ხელმძღვანელი, ლაზერული დივიზიის ლიდერი. მისი მეთაურობით მარსის ჯარები აკონტროლებენ დედამიწას და მის მოსახლეობას, უჩვენებენ მათ მარსის ძლევამოსილებას.</p>
-            <div class="hymn">
-                <p><strong>მარსის ჰიმნი:</strong></p>
-                <p>
-                    ჩვენ ვართ მარსის შვილები, ძლიერები და მამაცნი,<br>
-                    ლაზერები ჩვენ გვმართავს, ცეცხლი ზეციდანაა ჩვენი ხმა.<br>
-                    დედამიწა ჩვენისაა, მორჩილი და მარცხდებული,<br>
-                    ჩვენი ძალა უსასრულოა, ჩვენი გზაა გამარჯვება.<br>
-                    წინ, მარსი! წინ, მარსის ძლიერო!<br>
-                    ჩვენი ტალღები ყველაფერს გაანადგურებს,<br>
-                    ჩვენი სულები ამაღლდებიან, ჩვენ ვდომინირებთ ყველგან.
-                </p>
-            </div>
-            <a href="https://www.tiktok.com/@tonanzintla__618?_t=8pMwUdo5iVx&_r=1" class="button" target="_blank">ტიკტოკის პროფილი</a>
         </div>
+    </div>
+    <button class="button">
+        <a href="https://www.tiktok.com/@tonanzintla__618?_t=8pMwUdo5iVx&_r=1" target="_blank">ტიკტოკზე გადასვლა</a>
+    </button>
+    
+    <!-- Малий ASCII-арт -->
+    <div class="ascii-art-small">
+        __    __     ______     ______     ______<br>
+        /\ "-./  \   /\  __ \   /\  == \   /\  ___\<br>
+        \ \ \-./\ \  \ \  __ \  \ \  __<   \ \___  \<br>
+         \ \_\ \ \_\  \ \_\ \_\  \ \_\ \_\  \/\_____\<br>
+          \/_/  \/_/   \/_/\/_/   \/_/ /_/   \/_____/
+    </div>
+
+    <!-- Місце для великого ASCII-арту -->
+    <div class="ascii-art-large">
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&######B####&&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&##BGGPP55YYYJJJJJJJJJJYY5PGB#&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&#BGPP55YYYJJJJ???????????JJJJJJJJY5G#&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@&#BGP55555YJJJ?????????????JJJJJJJJJJJJ?JJY5G#&@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@&BGPP55555YYJJJ????????????JJ???????????????JJ??JYPB&@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@&#GPP555555YYYJJJJ????????????????????????JJ??????JJ???JP#@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@&#GPP5555555YYYYJJJJJ??????????????????JJJ?JYYY?????JJ??????5#@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@&#GPPPP5555YYYYJJJJJJJ??????????????????JJJJ??JJJ???????????????5#@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@&BGPPP555YYYYYYJJJJJJJ????????????7????7??????????77?????????????7?5&@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@&#BGGPP555YYYYYJJJJJJJJYJJJJ?????7777????7?????7777777777????????77777?B@@@@@@@@@@@@@@
+@@@@@@@@@@@@@&#BGPPP555YYYYYJJJJJJJJYYJJJ777777777???????????777777777777777777777777!P@@@@@@@@@@@@@
+@@@@@@@@@@@@&#BGPPP555YYYYJJJJJJJJJJJJJJ777777777777???????????77?77777777777777777777!P@@@@@@@@@@@@
+@@@@@@@@@@@&#BGPPP555YYYYJJJJJJYYJJJJJ?777?777777777???????????7777777777777777!!!!!777!P@@@@@@@@@@@
+@@@@@@@@@@&#BGPPP555YYYYJJJJJJJJJJ?????7????7777777???????????77777777777777777!!!!!!!!!!G@@@@@@@@@@
+@@@@@@@@@&#BGPP5555YYYYJJJJJJJJJ?????????7?77777777????????77777777777777777!!!!!!!!!7!!!7#@@@@@@@@@
+@@@@@@@@@&#BGPP555YYYYYJJJJJJJJ????????????7777777???77???777777777777777777!!!!!!77!!77!!J@@@@@@@@@
+@@@@@@@@&#BGPP5555YYYYJJJJJJJJ??????????????7???????77777777777777777777777!!!!!!77777777!!#@@@@@@@@
+@@@@@@@@&#GPPP555YYYYJJJJJJJ????????????????????77777777777777777777777!!7!!!7!!7777777777!5@@@@@@@@
+@@@@@@@@#BGPP55YYYYYYJJJJJJJ???????????????????777777777777777777777777777!7777!7777777777!?@@@@@@@@
+@@@@@@@@#BGPP55YYYYYJJJJJJJJJ??????????????????77777777777777777777777777!77777!777777777777&@@@@@@@
+@@@@@@@@#BGPP555YYYYYJJJJJJJJ??????????????7???7777777777777777777777777!7777777777777777777&@@@@@@@
+@@@@@@@@#BGPP555YYYYYJJJJJJJ???????????????777777777777777777777777777777777777777777777777?@@@@@@@@
+@@@@@@@@#BGPP55YYYYYJJJJJJJJ??????????????7JJ7?77777777777777777777777777777777777777777777Y@@@@@@@@
+@@@@@@@@&BGPP5555YYYYYYJJYJYJJJJJJJJ???JJ???J??????7777777????7777777777777?????777777777??G@@@@@@@@
+@@@@@@@@&#GGPPP555555YYYYYYYYYYYYYYYY5YJJJ??JJ??????????????????7?7????????????7??777?????Y&@@@@@@@@
+@@@@@@@@@#BGGPPPPP55555YYYYJYYYYYY555YYYYYJJYYJ??????????????????????????7????????????????B@@@@@@@@@
+@@@@@@@@@&#BGGPPPPPPP555YYYYYYYYJYY55555YYYY5YYYJYYJJJJJ???JJ??????????JJ?JJJJJYYJJJ?????5@@@@@@@@@@
+@@@@@@@@@@&BGGGPPPPPPP55555YYYYYYYYYYYYYYY555Y55YYYYYYYYYYJYJJJJ??JJ?JJYJJJJYYYYYYYYYJ?JY&@@@@@@@@@@
+@@@@@@@@@@@&BGGPPPPPPPP55555YYYYYYYYYYYYYYYY5YYYYYYYYYYYYYYYYYYYJJJJJJJJYYYYYYYYYYYYYYJY#@@@@@@@@@@@
+@@@@@@@@@@@@#BGPP555555555YYY5YYYYYYYYYJJYYYYYYYYYYY5Y5YYYYYYYYYYYYYYYYYJYYYYYYYYYYYYYY#@@@@@@@@@@@@
+@@@@@@@@@@@@@&BGPP555YYY5YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY#@@@@@@@@@@@@@
+@@@@@@@@@@@@@@&BGPPP55555YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYP&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@&#GPP5555YYYYYYYYYYYYYYYYYYYYYYYYJJJJJJYYYYYJYYJJJYYJYYYYYJJJYYYYYY5B@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@&BP5555YYYYYYYYYYYYYYYYYYYYYJJJJJJJJJYYJJYYYYYYYYJYYYYYYJJJJJJY5B&@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@&BP5YYYYYYYYYYYYYYYYYYYYJJJJJJJJJJJYYYYYYYYYYYYYYYYYYJJJJJJ5G&@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@&BP55YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYJJJJJ????YB&@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@&BGP5YYYYYYYYYYYYYYYYYYYYYYYYJJJJJJ???7!!!!~~!!!!?5B@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@&&BGPP555YYYYYJJJJJJ??7777!!!~~~~~^^^^^^~~!7J5B&@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&#BBGP55YJJJ???7777!!!!!!!~~~!!!!77JYPB&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&##BGP55YYJJJJJJJJJJJYY55PPG#&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&&########&&&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     </div>
 </body>
 </html>

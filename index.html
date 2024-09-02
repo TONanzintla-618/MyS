@@ -16,6 +16,7 @@
             justify-content: center;
             height: 100vh;
             flex-direction: column;
+            overflow-x: hidden;
         }
         .container {
             display: flex;
@@ -23,14 +24,15 @@
             justify-content: flex-start;
             border: 2px solid #00ff00;
             padding: 20px;
-            max-width: 800px;
+            max-width: 90vw;
+            overflow-wrap: break-word;
         }
         .text-content {
             max-width: 500px;
             margin-left: 20px;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             margin-bottom: 0.5em;
             text-align: center;
             width: 100%;
@@ -48,18 +50,12 @@
             border: none;
             cursor: pointer;
             text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
         }
         .button a {
             text-decoration: none;
             color: #000000;
-        }
-        .ascii-art-large {
-            font-size: 0.5em;
-            text-align: center;
-            margin-top: 20px;
-            line-height: 1em;
-            white-space: pre;
-            font-family: monospace;
         }
         .sound-toggle-button {
             margin-top: 20px;
@@ -69,11 +65,20 @@
             padding: 0;
         }
         .sound-toggle-button img {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background-color: white;
             padding: 5px;
+        }
+        .ascii-art-large {
+            font-size: 0.5em;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1em;
+            white-space: pre;
+            font-family: monospace;
+            max-width: 90vw;
         }
     </style>
 </head>
@@ -95,16 +100,14 @@
             <p><strong>აღწერა:</strong> მარაგანდა არის მარსის იმპერიის სამხედრო საწყობის ხელმძღვანელი, ლაზერული დივიზიის ლიდერი. მისი მეთაურობით მარსის ჯარები აკონტროლებენ დედამიწას და მის მოსახლეობას, უჩვენებენ მათ მარსის ძლევამოსილებას.</p>
         </div>
     </div>
-    <button class="button">
-        <a href="https://www.tiktok.com/@tonanzintla__618?_t=8pMwUdo5iVx&_r=1" target="_blank">ტიკტოკზე გადასვლა</a>
-    </button>
+    <a class="button" href="https://www.tiktok.com/@tonanzintla__618?_t=8pMwUdo5iVx&_r=1" target="_blank">ტიკტოკზე გადასვლა</a>
 
     <button class="sound-toggle-button" id="sound-toggle">
         <img id="sound-icon" src="https://static.thenounproject.com/png/904739-200.png" alt="Sound Icon">
     </button>
 
     <div class="ascii-art-large">
-        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&######B####&&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
